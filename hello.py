@@ -1,2 +1,3 @@
-a = "Python is cool";
-print(a[-2])
+def my_function(counter=89):
+    print("Counter: {}".format(counter))
+my_function(12)
