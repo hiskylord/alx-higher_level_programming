@@ -1,3 +1,6 @@
-def my_function(counter=89):
-    print("Counter: {}".format(counter))
-my_function(12)
+while True:
+   try:
+       x = int(input("Please enter a number: "))
+       break
+   except ValueError:
+       print("Oops!  That was no valid number.  Try again...")
