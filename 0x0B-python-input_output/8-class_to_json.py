@@ -1,7 +1,14 @@
 #!/usr/bin/python3
-"""json object"""
+"""
+This return the dict representation of a instance of Class.
+"""
 
 
 def class_to_json(obj):
-    """dict obj"""
-    return obj.__dict__
+    """
+    Returns the dictionary description with simple data structure
+    Args:
+      - obj: instance of class
+    """
+
+    return (obj.__dict__)

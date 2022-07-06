@@ -1,9 +1,18 @@
 #!/usr/bin/python3
-"""load from json"""
+"""
+This reads files .json and convert to types of python
+"""
+
+
 import json
 
 
 def load_from_json_file(filename):
-    """load from json"""
-    with open(filename, encoding="utf-8") as fd:
-        return json.load(fd)
+    """
+    Read a file and convert the content (JSON) to python types
+    Args:
+      - filename: path
+    """
+
+    with open(filename, mode="r", encoding="utf-8") as _file:
+        return (json.loads(_file.read()))
