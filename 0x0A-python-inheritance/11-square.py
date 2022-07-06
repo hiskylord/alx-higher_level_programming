@@ -1,26 +1,21 @@
 #!/usr/bin/python3
 """
-This module implements a Square object
+This program improves a previous Square
 """
 
 
-Rectangle = __import__('9-rectangle').Rectangle
+PrevSquare = __import__('10-square').Square
 
 
-class Square(Rectangle):
+class Square(PrevSquare):
+    """
+    Improved Class Square
+    """
+
     def __init__(self, size):
-        """initialization
-
-        Args:
-            size (int): size
-        """
-        super().__init__(size, size)
-        self.__size = size
+        """Constructor of the improved Square"""
+        super().__init__(size)
 
     def __str__(self):
-        """string representation
-
-        Returns:
-            str: string
-        """
-        return "[Square] {:d}/{:d}".format(self.__size, self.__size)
+        """String representation of Square"""
+        return '[Square] {0:d}/{0:d}'.format(self.__size)

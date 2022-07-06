@@ -1,16 +1,16 @@
 #!/usr/bin/python3
 """
-This module implements an object skeleton for BaseGeometry
+This has an incompleted class
 """
 
 
-class BaseGeometry:
-    """implementation
+class BaseGeometry():
     """
-    def area(self):
-        """find area
+    This class contain a method not implemented
+    """
 
-        Raises:
-            Exception: area not implemented
+    def area(self):
         """
-        raise Exception("area() is not implemented")
+        This function raise an exception
+        """
+        raise Exception('area() is not implemented')

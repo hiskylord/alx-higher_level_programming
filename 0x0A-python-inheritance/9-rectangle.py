@@ -1,37 +1,28 @@
 #!/usr/bin/python3
 """
-This module implements a Rectangle object
+This program use the inherit to create a new Rectangle
 """
 
 
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
+prevRectangle = __import__('8-rectangle').Rectangle
 
 
-class Rectangle(BaseGeometry):
+class Rectangle(prevRectangle):
+    """
+    Class Rectangle based in BaseGeometry and other rectangle
+    """
+
     def __init__(self, width, height):
-        """initialisation
-
-        Args:
-            width (int): width
-            height (int): height
-        """
-        self.integer_validator("width", width)
-        self.integer_validator("height", height)
+        """Constructor of new Retangle"""
+        self.integer_validator('width', width)
         self.__width = width
+        self.integer_validator('height', height)
         self.__height = height
 
     def area(self):
-        """area
-
-        Returns:
-            int: response
-        """
+        """This method return the area of the Rectangle"""
         return self.__width * self.__height
 
     def __str__(self):
-        """string
-
-        Returns:
-            str: string representation
-        """
-        return "[Rectangle] {:d}/{:d}".format(self.__width, self.__height)
+        """This method return the representation of the Rectangle"""
+        return '[Rectangle] {:d}/{:d}'.format(self.__width, self.__height)
