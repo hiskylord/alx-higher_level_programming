@@ -1,23 +1,26 @@
 #!/usr/bin/python3
 """
-This module defines `text_indentation`
-
-The function prints a text with 2 new lines after each of
-these characters: ., ? and :
+This program takes a text and search the delimitors (?, : and .)
+if find this characters insert two new lines after this delimitors
+an print the result.
 """
 
 
 def text_indentation(text):
-    """adds paragraph after `.`, `:` and `?`
-
-    Args:
-        text (str)
+    """
+    text_indentation: Insert two new lines after the delimitors ?, : and .
+    After that print the result.
+     Args:
+      - text: str
     """
     if not isinstance(text, str):
         raise TypeError('text must be a string')
 
-    for l in '.:?':
-        text = text.replace(l, '{}\n'.format(l))
-    lines = text.splitlines()
-    for index, line in enumerate(lines):
-        print(line.strip(), end='' if index == len(lines) - 1 else '\n\n')
+    delimitors = '.:?'
+    final = text
+
+    for cut in delimitors:
+        final = f'{cut}\n\n'.join(
+            (list(map(lambda w: w.strip(' '), final.split(cut))))
+        )
+    print(final, end='')
